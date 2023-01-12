@@ -46,11 +46,9 @@ const index = () => {
     <div
       className={!(scrollY > 370) ? "navonn zindexx" : "navonn zindex"}
       style={{
-
         position: "sticky",
         top: "0",
         background: "#fff",
-       
       }}
     >
       <div className="container">
