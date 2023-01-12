@@ -25,21 +25,25 @@ const index = () => {
       <div className="">
         <div className="sidebar">
           <div className="sidwrap">
-            <div>
+            <div className="position-relative ">
               <img
                 src={post.avatar_url}
                 alt="avatar"
                 className="sidebar__img"
               />
+            <button className="stikr position-absolute">🙃</button>
+
             </div>
             <div className="sidwww">
               <h2 className="sidebar__title">{post.name}</h2>
               <p className="sidebar__text">{post.login}</p>
             </div>
           </div>
+
+          <button className="stikrr">🙃 Edit status</button>
+
           <div className="sidebar__das">{post.bio}</div>
           <button className="w-100 sidebar__btn">Edit profile</button>
-
           <ul className="sidebar__ul">
             <li className="sidebat__ul_list">
               <NavLink to="/followers" className="sidebar__ul_list--link">

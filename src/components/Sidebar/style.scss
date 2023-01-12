@@ -32,14 +32,11 @@
     }
   }
 
-
-  
   &__ul {
     display: flex;
     gap: 6px;
     &_list {
       &--link {
-
         text-decoration: none;
         color: #3e4042;
         font-size: 14px;
@@ -52,14 +49,57 @@
   }
 }
 
-  .sidwrap{
-    display: block;
-    align-items: center;
-    gap: 20px;
-  }
+.stikr {
+  display: flex;
+  align-items: center;
+  right: 0;
+  bottom: 38px;
+  width: 38px;
+  height: 38px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: 1px solid rgb(196, 196, 196);
+  padding: 7px 7px;
+}
+.stikr:hover {
+  width: 100px;
+  border-radius: 20px;
+  height: 38px;
+  padding: 7px 7px;
+  right: -61px;
+  transition: all 0.05s ease;
+  box-shadow: 2px 2px 3px rgba(149, 149, 149, 0.18);
+}
+.stikr:hover:after {
+  content: "Edit status";
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  color: blue;
+  transition: all 0.8s ease;
+}
 
+.stikrr {
 
-@media only screen and (max-width:1010px) {
+  width: 100%;
+  margin: 15px 0;
+  background-color: #fff;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  display: none;
+}
+
+.sidwrap {
+  display: block;
+  align-items: center;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 1010px) {
   .sidebar {
     width: 256px;
     height: auto;
@@ -69,26 +109,22 @@
 }
 
 @media only screen and (max-width: 860px) {
-  
   .over__ul_list {
     width: 47% !important;
     height: 97px;
     border: 1px solid rgba(170, 170, 170, 0.5);
     border-radius: 7px;
     padding: 12px 5px !important;
+  }
+  .sidebar {
+    width: 200px;
+    height: auto;
+    position: relative;
+    top: -35px;
+  }
 }
-.sidebar {
-  width: 200px;
-  height: auto;
-  position: relative;
-  top: -35px;
-}
 
-}
-
-
-
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
   .sidebar {
     order: -10;
     width: 100%;
@@ -99,15 +135,15 @@
       margin-bottom: 30px;
     }
   }
-  .sidwrap{
+  .sidwrap {
     display: flex;
     align-items: center;
     gap: 20px;
   }
-  .sidwrap{
-    width:100%;
+  .sidwrap {
+    width: 100%;
   }
-  .sidwww{
+  .sidwww {
     width: 100%;
   }
 
@@ -117,10 +153,18 @@
     border: 1px solid rgba(170, 170, 170, 0.5);
     border-radius: 7px;
     padding: 12px !important;
-}
+  }
 
-.sidebar__ul {
-  padding-bottom: 10px;
+  .sidebar__ul {
+    padding-bottom: 10px;
+  }
 
-}
+  .stikr{
+    display: none;
+  }
+
+  .stikrr{
+    display: flex;
+    justify-content: start;
+  }
 }
