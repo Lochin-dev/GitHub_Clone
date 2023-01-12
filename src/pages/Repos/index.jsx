@@ -1,7 +1,7 @@
 import { useEffect, useState , useContext } from "react";
 import { MdArrowDropDown } from "react-icons/md";
 import { RiGitRepositoryLine } from "react-icons/ri";
-import ItemPost from "./itemPost";
+import ItemPost from "./ItemPost";
 import "./style.scss";
 
 import { Context } from "../../context/Context";
