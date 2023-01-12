@@ -1,0 +1,138 @@
+.navon {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  &__div {
+    
+
+    display: flex;
+    align-items: center;
+    width: 296px;
+
+    &_text {
+      margin: 0 10px;
+    }
+    &_img {
+      border-radius: 50%;
+    }
+  }
+
+  &__div_ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+
+    &--list {
+      padding: 3px 7px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 400;
+      position: relative;
+      &-link {
+        display: flex;
+        color: #24292f;
+        text-decoration: none;
+        &.active {
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: red;
+            top: 40px;
+            left: 0;
+          }
+        }
+        &:hover {
+          color: #1a1d22;
+        }
+        &.active {
+          color: black;
+          font-weight: 500;
+        }
+      }
+
+      &:hover {
+        background-color: #eeeeee;
+        color: #24292f;
+      }
+    }
+  }
+}
+
+.navtwo{
+  display: none;
+}
+
+.zindex{
+  z-index: 1000000;
+}
+
+.end {
+  display: none;
+}
+
+@media only screen and (max-width: 1010px) {
+  .navon__div_ul {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 955px) {
+  .two {
+    display: none;
+  }
+  .end {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 0px;
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .one {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navon {
+    overflow-x: auto;
+    overflow-y: none;
+    height: 59px;
+    z-index: 5;
+  }
+
+  .navon__div_ul--list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1px;
+  }
+  .navon__div {
+    display: none;
+  }
+  .one {
+    display: block;
+  }
+
+  .two {
+    display: block;
+  }
+  .end {
+    display: none;
+  }
+
+  .navon__div_ul--list-link.active::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    top: 33px;
+    left: 0px;
+  }
+}
