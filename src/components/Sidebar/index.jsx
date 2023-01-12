@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./style.scss";
 import { FiUsers } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
@@ -6,14 +6,14 @@ import { Context } from "../../context/Context";
 
 const index = () => {
   const [post, setPost] = useState([]);
-  const {apiValue} = useContext(Context);
+  const { apiValue } = useContext(Context);
+  const [icon, setIcon] = useState(false);
 
   const fetchPost = async () => {
-    const response = await fetch(
-      `https://api.github.com/users/${apiValue}`
-    );
+    const response = await fetch(`https://api.github.com/users/${apiValue}`);
     const resolt = await response.json();
     setPost(resolt);
+    setIcon(true);
   };
 
   useEffect(() => {
@@ -31,8 +31,13 @@ const index = () => {
                 alt="avatar"
                 className="sidebar__img"
               />
-            <button className="stikr position-absolute">🙃</button>
-
+              <button
+                className={
+                  icon ? "stikr position-absolute d-block" : "stikr position-absolute d-none"
+                }
+              >
+                🙃
+              </button>
             </div>
             <div className="sidwww">
               <h2 className="sidebar__title">{post.name}</h2>
